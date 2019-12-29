@@ -57,7 +57,7 @@ app.get('/weather', (req, res) => {
             error:"You must provide an Address as a Query"
         })
     }
-    geocode(req.query.address, (error, {latitude, longitude, location} = {})=> {     //we set dafault params of destructured elements to null(empty set). If not and we give a wrong address then error will pop up that shows cannot destructure undefined element(coz earlier too it was null) and app would crash
+    geocode(req.query.address, (error, {latitude, longitude, location} = {})=> {     //we set dafault params of destructured elements to null(empty set). If not and we give a wrong address then error will pop up that shows cannot destructure undefined element(coz earlier too it was null) and app would crash 
         if(error){
             return res.send({error})
         }
